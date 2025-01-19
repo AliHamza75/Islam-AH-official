@@ -13,68 +13,88 @@
       background: linear-gradient(to right, #04076B, #04076B);
       color: white;
       line-height: 1.6;
-            scroll-behavior: smooth;
-    }
-    header {
+      scroll-behavior: smooth;
+  }
+  header {
       background: #04076B;
       padding: 20px;
       text-align: center;
-    }
+      animation: fadeIn 1s ease-out;
+  }
 
-    header h1 {
+  header h1 {
       margin: 0;
       font-size: 2.5em;
-    }
+      animation: slideInFromLeft 1s ease-out;
+  }
 
-    header p {
+  header p {
       font-size: 1.2em;
       color: #dcdde1;
-    }
-    nav {
+      animation: fadeIn 1s ease-out;
+  }
+
+  nav {
       display: flex;
       justify-content: center;
       background: #04076B;
       padding: 10px;
       border: 3px solid #71FFCC;
       border-radius: 8px;
-    }
-    nav:hover {
+      animation: slideInFromTop 1s ease-out;
+  }
+
+  nav:hover {
       background: #71FFCC;
       border: 3px solid #FF96DC;
-    }
-    nav a {
+  }
+
+  nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-size: 18px;
       padding: 8px 15px;
       border-radius: 5px;
-    }
-    nav a:hover {
+      animation: bounce 1s infinite;
+  }
+
+  nav a:hover {
       background: #FFA8D3;
-    }
-    .video-container {
+  }
+
+  .video-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px;
-    }
-    .video-card {
+      animation: fadeInUp 1.5s ease-out;
+  }
+
+  .video-card {
       background: #04076B;
       border: 3px solid #71FFCC;
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
-    }
-    .video-card:hover {
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      animation: fadeIn 1.5s ease-out;
+  }
+
+  .video-card:hover {
       background: #71FFCC;
       border: 3px solid #FF96DC;
-    }
-    .video-card img {
+      transform: scale(1.05);
+  }
+
+  .video-card img {
       width: 100%;
       height: auto;
-    }
-    .video-card button {
+      transition: opacity 0.3s ease;
+  }
+
+  .video-card button {
       display: inline-block;
       margin: 10px;
       padding: 10px 20px;
@@ -85,32 +105,41 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s, border 0.3s;
-    }
-    .video-card button:hover {
+  }
+
+  .video-card button:hover {
       background: #71FFCC;
       border-color: #FF96DC;
-    }
-    .about-container {
+  }
+
+  .about-container {
       padding: 20px;
       display: grid;
       gap: 20px;
-    }
-    .about-paragraph {
+      animation: fadeInUp 1.5s ease-out;
+  }
+
+  .about-paragraph {
       background: #04076B;
       border: 3px solid #71FFCC;
       border-radius: 10px;
       padding: 20px;
       transition: background 0.3s, border 0.3s;
-    }
-    .about-paragraph:hover {
+      animation: fadeIn 2s ease-out;
+  }
+
+  .about-paragraph:hover {
       background: #71FFCC;
       border: 3px solid #FF96DC;
-    }
-    .visit-now {
+  }
+
+  .visit-now {
       text-align: center;
       margin: 20px 0;
-    }
-    .visit-now button {
+      animation: fadeIn 2s ease-out;
+  }
+
+  .visit-now button {
       padding: 15px 30px;
       font-size: 18px;
       color: white;
@@ -119,19 +148,23 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s, border 0.3s;
-    }
-    .visit-now button:hover {
+  }
+
+  .visit-now button:hover {
       background: #71FFCC;
       border-color: #FF96DC;
-    }
-    footer {
+  }
+
+  footer {
       display: flex;
       justify-content: center;
       background: #04076B;
       padding: 10px;
       gap: 20px;
-    }
-    footer button {
+      animation: fadeInUp 1.5s ease-out;
+  }
+
+  footer button {
       padding: 10px 20px;
       font-size: 16px;
       color: white;
@@ -140,33 +173,89 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s, border 0.3s;
-    }
-    footer button:hover {
+  }
+
+  footer button:hover {
       background: #71FFCC;
       border-color: #FF96DC;
-    }
-            #top-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            padding: 14px 13px;
-            font-size: 18px;
-            background: #FF96DC;
-            color: white;
-            border: none;
-            border-radius: 100%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
+  }
 
-        #top-button:hover {
-            background: #71FFCC;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            opacity: 1;
-        }
+  #top-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 14px 13px;
+      font-size: 18px;
+      background: #FF96DC;
+      color: white;
+      border: none;
+      border-radius: 100%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0.8;
+      transition: all 0.3s ease;
+      animation: bounce 1s infinite;
+  }
+
+  #top-button:hover {
+      background: #71FFCC;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+  }
+
+  /* Keyframe animations */
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @keyframes fadeInUp {
+      0% {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes slideInFromLeft {
+      0% {
+          opacity: 0;
+          transform: translateX(-100%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  @keyframes slideInFromTop {
+      0% {
+          opacity: 0;
+          transform: translateY(-100%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes bounce {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+  }
 </style>
+
 <body>
     <header>
         <img src="image logo" alt="image" width="100" />
@@ -211,13 +300,13 @@
             </header>
             <div class="about-container">
                 <div class="about-paragraph">
-                    ISLAM AH is dedicated to providing soulful Quran recitations that foster a deep connection with the divine words of Allah. Our channel is not just about listening but about feeling the profound impact of these recitations in our daily lives. We aim to create an environment of peace and spirituality for our audience, where each verse resonates with clarity, love, and serenity.
+                    ISLAM AH is dedicated to providing soulful Quran recitations that foster a deep connection with the divine words of Allah...
                 </div>
                 <div class="about-paragraph">
-                    Every video is carefully crafted to enhance the listening experience, whether for personal reflection, prayer, or daily routine. Our recitations are melodious, heartfelt, and accessible to all, regardless of background or familiarity with the Quran. Through this channel, we hope to inspire spiritual growth and tranquility, helping viewers cultivate a deeper bond with their faith.
+                    Every video is carefully crafted to enhance the listening experience...
                 </div>
                 <div class="about-paragraph">
-                    Join us on this journey to experience the beauty of Quranic verses and immerse yourself in a peaceful, spiritual atmosphere. Whether you seek guidance, solace, or a greater understanding of the Quran, ISLAM AH is here to support your spiritual journey.
+                    Join us on this journey to experience the beauty of Quranic verses...
                 </div>
                 <div class="visit-now">
                     <button onclick="window.open('https://youtube.com/@hafizhamidali342?si=tEeimmTBlxu1Gj7B', 'main')">Visit Now</button>
@@ -228,15 +317,14 @@
     <footer>
         <button onclick="window.open('https://alihamza75.github.io/islam-ah/', 'main')">Visit Now Other Site</button>
         <p>&copy; 2025 Islam AH</p>
-    </footer> <button id="top-button" onclick="scrollToTop()">🔝</button>
+    </footer>
+    <button id="top-button" onclick="scrollToTop()">🔝</button>
 
     <script>
-        // Back to Top Button Functionality
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Show or Hide Back to Top Button on Scroll
         window.onscroll = function () {
             const topButton = document.getElementById('top-button');
             if (document.documentElement.scrollTop > 300) {
@@ -246,7 +334,5 @@
             }
         };
     </script>
-</body>
-</html>
 </body>
 </html>
